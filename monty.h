@@ -34,13 +34,11 @@ typedef struct stack_s
  *
  * @f: function to handle the opcode
  *
- *
- *
  * Description: opcode and its function
  *
  * for stack, queues, LIFO, FIFO
  *
- * */
+ */
 typedef struct instruction_s
 {
 	char *opcode;
@@ -58,6 +56,7 @@ typedef struct instruction_s
  * @lifi: flag change stack <-> queue
  *
  * Description: carries values through the program
+ *
  */
 typedef struct bus_s
 {
@@ -65,9 +64,9 @@ typedef struct bus_s
 	FILE *file;
 	char *content;
 	int lifi;
-      	bus_t;
-	extern bus_t bus;
-	char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
+}  bus_t;
+extern bus_t bus;
+char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
 void f_push(stack_t **head, unsigned int number);
